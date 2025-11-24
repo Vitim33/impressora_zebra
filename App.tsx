@@ -63,6 +63,13 @@ export default function App() {
         <Button title="Listar pareados" onPress={load} />
       </View>
 
+      <View style={{ alignItems: 'center', marginBottom: 20 }}>
+        <Button
+          title="Imprimir"
+          onPress={() => imprimir('48:A4:93:DB:B7:C5')}
+        />
+      </View>
+
       <FlatList
         data={devices}
         keyExtractor={item => item.address}
