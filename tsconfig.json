@@ -1,14 +1,16 @@
 {
   "extends": "@tsconfig/react-native/tsconfig.json",
-   "compilerOptions": {
+  "compilerOptions": {
     "strict": true,
     "baseUrl": ".",
     "paths": {
-      "*": ["types/*"]
+      "*": [
+        "types/*"
+      ]
     }
   },
   "include": [
-    "src",
+    "src/**/*",
     "App.tsx",
     "index.js"
   ]
