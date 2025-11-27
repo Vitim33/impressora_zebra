@@ -1,17 +1,17 @@
 {
-  "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "jsx": "react-native",
     "strict": true,
-    "baseUrl": ".",
-    "paths": {
-      "*": [
-        "types/*"
-      ]
-    }
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "skipLibCheck": true
   },
   "include": [
-    "src/**/*",
-    "App.tsx",
+    "src/**/*.ts",
+    "src/**/*.tsx",
     "index.js"
   ]
 }
