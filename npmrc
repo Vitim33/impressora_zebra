@@ -1,0 +1,4 @@
+# Força o uso de uma versão do Node.js compatível com o React Native 0.82.
+# A versão 20.x é a recomendada para o React Native 0.82.
+engine-strict=true
+node-version=20.11.1

@@ -8,8 +8,6 @@ react {
 
 def enableProguardInReleaseBuilds = false
 
-def jscFlavor = 'io.github.react-native-community:jsc-android:2026004.+'
-
 android {
     ndkVersion rootProject.ext.ndkVersion
     buildToolsVersion rootProject.ext.buildToolsVersion
@@ -28,8 +26,8 @@ android {
     sourceSets {
         main {
             java.srcDirs += 'src/main/kotlin'
-            jniLibs.srcDirs = ['libs'] // para .so se houver
-            resources.srcDirs += 'libs' // opcional, caso os JARs precisem
+            jniLibs.srcDirs = ['libs']
+            resources.srcDirs += 'libs'
         }
     }
 
@@ -71,11 +69,9 @@ repositories {
 dependencies {
     implementation("com.facebook.react:react-android")
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    
+
     if (hermesEnabled.toBoolean()) {
         implementation("com.facebook.react:hermes-android")
-    } else {
-        implementation jscFlavor
     }
 
 }
